@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> JavaScript object notation</h1>
+    <p> json doesn't contain function</p>
+    <p>   will store in form of string accept num and boolean values</p> 
+    <script>
+        let obj1 ={
+            firstName:"mnaju",
+            lastName:"sm",
+            age:"19",
+            email:"smm",
+
+        }
+        console.log("obj1:",obj1);
+        console.log("typeof obj1:",typeof obj1);
+        let str1= JSON.stringify(obj1);
+        console.log("str1:",str1);
+         console.log("typeof str1:",typeof str1);
+         let obj2 = JSON.parse(str1);
+         console.log("obj2:",obj2);
+         console.log("typeof obj2:",typeof obj);
+
+    </script>
+</body>
+</html>
