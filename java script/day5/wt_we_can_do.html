@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>1.we can change the content of html.</p>
+
+    <h1 id="title">Hello World </h1>
+    <button type="button" onclick="document.getElementById('title').innerText='Text changed using js'">change the content of h1</button>
+    <p>2.we can change the html attr </p>
+    <img id="bulb" src="./off.webp" alt="off">
+    <button type="button" onclick="document.getElementById('bulb').src='./on.jpg'"> Turn on</button>
+    <button type="button" onclick="document.getElementById('bulb').src='./off.webp'"> Turn off</button>   
+
+    <p> 3.we can hide the element in html.</p>
+    <h3 id="title3">Lorem, ipsum dolor.</h3>
+    <button onclick="document.getElementById('title3').style.display='none'">Hide Ele </button>
+
+    <p>4. we can change thee css</p>
+    <div id="desc">Lorem ,ipsum.</div>
+    <button onclick="document.getElementById('desc').style.backgroundColor='green'">change background</button>
+
+
+    <p> 5.we can show the html element</p>
+    <h2 id="heading_2" style="display: none;">heading_2</h2>
+    <button onclick="document.getElementById('heading_2').style.display='block'">show Ele</button>
+
+
+
+
+</body>
+</html>
