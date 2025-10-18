@@ -1,0 +1,164 @@
+/* ----------------------- */
+/* Desktop Base Styles */
+/* ----------------------- */
+
+/* Main Navbar Wrapper (.navbar) */
+.navbar-custom {
+    /* Override Bootstrap's default padding/margin */
+    margin: 20px 70px; 
+    /* The layout (display: flex, justify-content: space-between) is handled by React Bootstrap's Navbar and utility classes */
+}
+
+/* Navigation Menu List (.nav-menu) */
+.nav-menu-custom {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 20px;
+    margin: 0; /* Remove default ul margin */
+    padding: 0; /* Remove default ul padding */
+}
+
+/* Navigation List Item (.nav-menu li) */
+.nav-item-custom {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    /* This li is acting as the wrapper for the link and underline */
+}
+
+/* Anchor Link (.anchor-link) */
+.anchor-link {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+/* Underline Image (.nav-menu li img) */
+.nav-underline-img {
+    display: flex;
+    margin: auto;
+    width: 100%; /* Adjust size if necessary */
+    height: auto;
+}
+
+/* Connect Button (.nav-connect) */
+.nav-connect-custom {
+    padding: 20px 40px !important;
+    border-radius: 50px !important;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%) !important;
+    font-size: 22px !important;
+    cursor: pointer;
+    transition: 0.5s;
+    border: none;
+}
+
+/* Connect Button Hover (.nav-connect:hover) */
+.nav-connect-custom:hover {
+    transform: scale(1.05);
+    /* Ensure hover doesn't change background color */
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%) !important; 
+    opacity: 0.9;
+}
+
+
+/* ----------------------- */
+/* Responsive Styles */
+/* ----------------------- */
+
+/* Tablets (<= 1024px) */
+@media (max-width: 1024px) {
+    .navbar-custom {
+        margin: 20px 40px;
+    }
+
+    .nav-menu-custom {
+        gap: 40px;
+        font-size: 18px;
+    }
+
+    .nav-connect-custom {
+        font-size: 20px !important;
+        padding: 15px 30px !important;
+    }
+}
+
+/* Mobile & Tablet View (<= 768px) */
+@media (max-width: 768px) {
+    .navbar-custom {
+        position: relative;
+        margin: 10px 20px;
+    }
+
+    /* Collapse Div (to house the menu and button on desktop) */
+    .nav-collapse-custom {
+        /* Hide menu and button by default on mobile */
+        display: none !important; 
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 30px 0;
+        border-radius: 10px;
+        z-index: 1000; /* Ensure it is above other content */
+    }
+    
+    /* When menu is open, show the collapse div */
+    .nav-collapse-custom.active {
+        display: flex !important;
+    }
+    
+    /* Mobile Menu List Overrides */
+    .nav-menu-custom {
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+        align-items: center;
+        /* Re-adding the connect button to the mobile menu for display when active */
+    }
+
+    /* Connect Button is conditionally hidden/shown via d-none d-md-block in JSX */
+    .nav-connect-custom {
+        /* If you wanted the button to show inside the mobile menu: */
+        display: flex !important; 
+        width: 80%;
+        text-align: center;
+        justify-content: center;
+    }
+
+
+    /* Hamburger Icon Styling */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        gap: 6px;
+        /* Override Bootstrap's d-none d-md-none visibility */
+        display: flex !important; 
+    }
+
+    .hamburger span {
+        width: 28px;
+        height: 3px;
+        background-color: white;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    /* Animate hamburger into X when active */
+    .hamburger.open span:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.open span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+}

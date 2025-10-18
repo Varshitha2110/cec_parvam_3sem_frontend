@@ -7,6 +7,7 @@ import location_icon from "../../assets/location_icon.svg";
 import call_icon from "../../assets/call_icon.svg";
 
 
+
 const Contact = () => {
   const [result, setResult] = useState("");
   const onSubmit = async (event) => {

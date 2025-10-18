@@ -1,0 +1,167 @@
+/*
+ * Custom CSS to apply styles that aren't easily achieved with React Bootstrap utilities.
+ * This includes specific sizing, linear gradients, and custom hover effects.
+ */
+
+/* General Hero Container (to manage the overall gap and structure) */
+.hero-custom-container {
+    /* Mimics the gap: 35px in .hero and other spacing/alignment */
+    --bs-gutter-x: 0; /* Remove default padding for fluid container */
+}
+
+/* Image styling */
+.hero-img-custom {
+    /* margin-top: 80px; */
+    margin-top: 80px; 
+    /* Mobile-specific adjustments from the original CSS are handled by utility classes like mt-md-5, mt-lg-5 in the component, or more custom rules here if needed: */
+}
+
+@media (max-width: 768px) {
+    .hero-img-custom {
+        width: 200px; /* .hero img width: 200px on mobile */
+        margin-top: 50px !important; /* Overriding utility classes for mobile */
+    }
+}
+
+/* Title Styling (.hero h1) */
+.hero-h1-custom {
+    /* Default (desktop) styles */
+    font-size: 60px; /* font-size: 60px */
+    font-weight: 600; /* fw-bold handles font-weight: 600 */
+    /* Width is controlled by Col sizing: lg={7} */
+    margin-top: 35px; /* Added margin to mimic gap since h1 is separate from img */
+}
+
+/* Gradient Text (.hero h1 span) */
+.hero-gradient-text {
+    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Title Responsive Styles */
+@media (max-width: 1024px) {
+    .hero-h1-custom {
+        font-size: 48px; /* For tablets/small laptops */
+    }
+}
+@media (max-width: 768px) {
+    .hero-h1-custom {
+        font-size: 34px; 
+        line-height: 45px;
+        margin-top: 25px; /* Adjusted gap: 25px for mobile */
+    }
+}
+@media (max-width: 480px) {
+    .hero-h1-custom {
+        font-size: 28px;
+        line-height: 38px;
+    }
+}
+
+/* Paragraph Styling (.hero p) */
+.hero-p-custom {
+    /* Default (desktop) styles */
+    font-size: 24px;
+    line-height: 40px;
+    margin-top: 35px; /* Added margin to mimic gap */
+}
+
+/* Paragraph Responsive Styles */
+@media (max-width: 1024px) {
+    .hero-p-custom {
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
+@media (max-width: 768px) {
+    .hero-p-custom {
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 25px; /* Adjusted gap: 25px for mobile */
+    }
+}
+@media (max-width: 480px) {
+    .hero-p-custom {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+/* Action Buttons Container (.hero-action) */
+/* Gap and flex-direction are primarily handled by utility classes in the component */
+@media (max-width: 768px) {
+    .hero-action-custom {
+        /* Adjusted gap: 15px for mobile. Controlled by gap-3 in component. */
+        margin-bottom: 40px !important; /* Overriding utility classes for mobile */
+    }
+}
+
+/* Connect Button (.hero-connect) */
+.hero-connect-custom {
+    /* Custom background gradient, border-radius, and font size/padding */
+    background: linear-gradient(264deg, #DF8908 -5.9%, #B415FF 100%);
+    border: none; /* Remove default button border */
+    border-radius: 50px !important; /* Overrides default Bootstrap radius */
+    padding: 25px 45px !important; /* Overrides default Bootstrap padding */
+    font-size: 24px !important; /* Overrides default Bootstrap font size */
+}
+
+/* Connect Button Hover (.hero-connect:hover) */
+.hero-connect-custom:hover {
+    border: 2px solid white !important;
+    background-color: transparent !important; /* Prevent background color from showing through */
+}
+
+/* Resume Button (.hero-resume) */
+.hero-resume-custom {
+    /* Custom border color, border-radius, and font size/padding */
+    border: 2px solid #FFF !important; /* Overrides outline-light border */
+    border-radius: 50px !important;
+    padding: 25px 75px !important;
+    font-size: 24px !important;
+    color: white !important; /* Ensure text remains white */
+    background-color: transparent !important; /* Ensure transparent background */
+}
+
+/* Resume Button Hover (.hero-resume:hover) */
+.hero-resume-custom:hover {
+    border-color: #B415FF !important;
+    background-color: transparent !important;
+    color: white !important; /* Keep text color white */
+}
+
+/* Button Responsive Styles (Tablets) */
+@media (max-width: 1024px) {
+    .hero-connect-custom,
+    .hero-resume-custom {
+        padding: 20px 40px !important; /* Adjusted padding */
+        font-size: 20px !important; /* Adjusted font size */
+    }
+    .hero-resume-custom {
+        padding: 20px 60px !important; /* Slightly more padding for resume button on tablet */
+    }
+}
+
+/* Button Responsive Styles (Mobile) */
+@media (max-width: 768px) {
+    .hero-connect-custom,
+    .hero-resume-custom {
+        width: 80% !important;
+        text-align: center;
+        padding: 18px 0 !important; /* Full width padding adjustment */
+        border-radius: 40px !important;
+        font-size: 18px !important;
+    }
+}
+
+/* Button Responsive Styles (Very Small Phones) */
+@media (max-width: 480px) {
+    .hero-connect-custom,
+    .hero-resume-custom {
+        width: 90% !important;
+        font-size: 16px !important;
+        padding: 15px 0 !important;
+    }
+}
