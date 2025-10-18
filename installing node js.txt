@@ -1,0 +1,7 @@
+installing node js 
+node --version
+npm - node package manager
+npm i -g bun
+bun create vite -create react project
+cltr c to stop the server
+bun run dev
