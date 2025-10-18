@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
@@ -133,5 +132,3 @@ export default function Header() {
     </header>
   );
 }
-
-

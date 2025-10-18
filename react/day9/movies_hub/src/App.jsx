@@ -9,7 +9,7 @@ import Contact, { contactData } from './pages/Contact';
 import './App.css';
 import NotFound from './pages/NotFound';
 import { getMoviesData } from './api/GetApiData';
-import { getMoviesDetails} from './api/GetMovieDetails';
+import { getMoviesDetails} from './api/GetMoviesDetails';
 import MovieDetails from './components/ui/MovieDetails';
 
 
@@ -62,5 +62,3 @@ const App = () => {
 
 
 export default App;
-
-

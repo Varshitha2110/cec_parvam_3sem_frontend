@@ -1,4 +1,3 @@
-
 export default function About() {
   return (
     <section className="py-16 px-6 bg-gradient-to-b from-gray-900 to-gray-800 text-white text-center">
@@ -42,7 +41,3 @@ export default function About() {
     </section>
   );
 }
-
-
-
-
